@@ -11,3 +11,4 @@ settings → pages → source: "deploy from a branch", branch: `main`, folder: `
 ## credits
 
 firework animation: "fireworks" by myriad, cc0, https://opengameart.org/content/fireworks
+arrow: "cc0 arrows" by knekko, cc0, https://opengameart.org/content/cc0-arrows

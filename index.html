@@ -51,6 +51,19 @@
       letter-spacing: 0.15em;
     }
 
+    /* 8-bit down arrow: cell (0,5) of knekko's cc0 arrow sheet, 16px sprite scaled 3x */
+    .pixel-arrow {
+      display: block;
+      width: 48px;
+      height: 48px;
+      margin: 12px auto 0;
+      background: url('https://opengameart.org/sites/default/files/arrow_sprites_even_cc0.png') 0 -240px / 1056px 1344px no-repeat;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      animation: nudge 1.2s steps(2) infinite;
+    }
+    @keyframes nudge { 50% { transform: translateY(6px); } }
+
     /* firework zone */
     #fireworks {
       position: relative;
@@ -132,6 +145,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+      .pixel-arrow { animation: none; }
     }
   </style>
 </head>
@@ -141,7 +155,7 @@
     <div class="wrap">
       <h1>arial waxman<br>portfolio</h1>
       <p class="byline">hi fumblerooski productions, i created this site to apply for the role as an editor. i hope you enjoy.</p>
-      <p class="scroll-hint">down here ↓</p>
+      <p class="scroll-hint">down here<span class="pixel-arrow" aria-hidden="true"></span></p>
     </div>
   </header>
 
@@ -193,7 +207,7 @@
   <footer>
     <div class="wrap">
       <p>arial waxman — editor</p>
-      <p>firework sprite by myriad via <a href="https://opengameart.org/content/fireworks" target="_blank" rel="noopener">opengameart</a> (cc0)</p>
+      <p>firework sprite by myriad via <a href="https://opengameart.org/content/fireworks" target="_blank" rel="noopener">opengameart</a> (cc0). arrow sprite by knekko via <a href="https://opengameart.org/content/cc0-arrows" target="_blank" rel="noopener">opengameart</a> (cc0)</p>
     </div>
   </footer>
 
