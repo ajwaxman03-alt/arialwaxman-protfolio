@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>arial waxman portfolio</title>
+  <meta name="description" content="editing and post-production portfolio of arial waxman">
+  <style>
+    :root {
+      --black: #000;
+      --white: #fff;
+      --rule: 2px solid var(--white);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-transform: lowercase;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--white); text-decoration: none; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+    /* intro */
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: var(--rule);
+    }
+    h1 {
+      font-size: clamp(2.6rem, 9vw, 6.5rem);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+    .byline {
+      margin-top: 32px;
+      max-width: 34em;
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      border-left: var(--rule);
+      padding-left: 16px;
+    }
+    .scroll-hint {
+      margin-top: 64px;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+    }
+
+    /* firework zone */
+    #fireworks {
+      position: relative;
+      height: 70vh;
+      min-height: 360px;
+      overflow: hidden;
+      border-bottom: var(--rule);
+    }
+    #fireworks .burst {
+      position: absolute;
+      width: 128px;
+      height: auto;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      filter: grayscale(1) brightness(1.6) contrast(1.4);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    #fireworks .label {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+    }
+
+    /* work */
+    section.work { padding: 64px 0; }
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      margin-bottom: 24px;
+    }
+    .group { margin-top: 48px; }
+    .group-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 12px 0;
+      border-top: var(--rule);
+    }
+    .item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px 24px;
+      align-items: baseline;
+      padding: 20px 0;
+      border-top: 1px solid var(--white);
+    }
+    .item:last-child { border-bottom: 1px solid var(--white); }
+    .item h3 { font-size: clamp(1.3rem, 3.5vw, 2rem); font-weight: 700; line-height: 1.1; }
+    .item .meta { grid-column: 1 / -1; font-size: 0.95rem; }
+    .item .role { grid-column: 1 / -1; font-size: 0.95rem; }
+    .item .role span {
+      display: inline-block;
+      border: 1px solid var(--white);
+      padding: 2px 8px;
+      margin: 4px 6px 0 0;
+    }
+    .watch {
+      border: var(--rule);
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      transition: background 0.1s, color 0.1s;
+    }
+    .watch:hover, .watch:focus-visible { background: var(--white); color: var(--black); outline: none; }
+
+    footer {
+      border-top: var(--rule);
+      padding: 24px 0 48px;
+      font-size: 0.8rem;
+    }
+    footer a { text-decoration: underline; }
+
+    @media (max-width: 560px) {
+      .item { grid-template-columns: 1fr; }
+      .watch { justify-self: start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <h1>arial waxman<br>portfolio</h1>
+      <p class="byline">hi fumblerooski productions, i created this site to apply for the role as an editor. i hope you enjoy.</p>
+      <p class="scroll-hint">scroll ↓</p>
+    </div>
+  </header>
+
+  <div id="fireworks" aria-hidden="true">
+    <span class="label">editing / post-production</span>
+  </div>
+
+  <section class="work">
+    <div class="wrap">
+      <h2>selected work</h2>
+
+      <div class="group">
+        <div class="group-title">nfts — sean connery talent lab</div>
+        <article class="item">
+          <h3>lady maclean</h3>
+          <a class="watch" href="https://nfts.co.uk/article/edinburgh-international-film-festival-2025-present-world-premiere-nfts-sean-connery-talent" target="_blank" rel="noopener">view →</a>
+          <p class="meta">short film, dir. catriona macleod. world premiere at edinburgh international film festival 2025.</p>
+          <p class="role"><span>runner</span></p>
+        </article>
+      </div>
+
+      <div class="group">
+        <div class="group-title">glasgow university filmmaking society</div>
+        <article class="item">
+          <h3>circa 2008</h3>
+          <a class="watch" href="https://www.youtube.com/watch?v=lCuker1q8r0" target="_blank" rel="noopener">trailer →</a>
+          <p class="meta">circa 2008, or his covenant forever. dir. olivia vaaranmaa.</p>
+          <p class="role"><span>production</span><span>sound</span><span>cinematography</span><span>editing</span></p>
+        </article>
+        <article class="item">
+          <h3>it's not unusual</h3>
+          <a class="watch" href="https://www.youtube.com/watch?v=wR8RCiGzHhw" target="_blank" rel="noopener">watch →</a>
+          <p class="meta">short film. a broke merman named dave takes a job he hasn't thought through.</p>
+          <p class="role"><span>editing</span><span>side character: fisherman</span></p>
+        </article>
+      </div>
+
+      <div class="group">
+        <div class="group-title">epic film reviews</div>
+        <article class="item">
+          <h3>marty supreme</h3>
+          <a class="watch" href="https://www.youtube.com/watch?v=AG4JODakPAo" target="_blank" rel="noopener">watch →</a>
+          <p class="meta">satirical film review series. (i'm the guy on the left)</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>arial waxman — editor</p>
+      <p>firework sprite by myriad via <a href="https://opengameart.org/content/fireworks" target="_blank" rel="noopener">opengameart</a> (cc0)</p>
+    </div>
+  </footer>
+
+  <script>
+    // 8-bit firework asset (cc0) by myriad, hosted on opengameart
+    const FIREWORK_GIF = 'https://opengameart.org/sites/default/files/firework.gif';
+    const zone = document.getElementById('fireworks');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function burst() {
+      const img = new Image();
+      // cache-bust so each burst restarts the gif from frame one
+      img.src = FIREWORK_GIF + '?b=' + Date.now() + Math.random();
+      img.className = 'burst';
+      img.alt = '';
+      img.style.left = (10 + Math.random() * 80) + '%';
+      img.style.top = (15 + Math.random() * 60) + '%';
+      img.style.width = (96 + Math.random() * 96) + 'px';
+      zone.appendChild(img);
+      setTimeout(() => img.remove(), 2400);
+    }
+
+    function show() {
+      const count = reduceMotion ? 1 : 7;
+      for (let i = 0; i < count; i++) setTimeout(burst, i * 280);
+    }
+
+    // fire each time the visitor scrolls past the intro into the firework zone
+    let ready = true;
+    new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && ready) {
+          ready = false;
+          show();
+          setTimeout(() => { ready = true; }, 2500);
+        }
+      });
+    }, { threshold: 0.35 }).observe(zone);
+  </script>
+</body>
+</html>
